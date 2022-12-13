@@ -1,0 +1,17 @@
+{
+    "name": "FlowSensor-Arduino",
+    "version": "1.0.0",
+    "keywords": "sensor, arduino",
+    "description": "Water Flow, Water Volume, YF-S201",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/hafidhh/FlowSensor-Arduino"
+    },
+    "authors": [{
+      "name": "hafidhh",
+      "email": "hafidhhidayat@hotmail.com",
+      "maintainer": true
+    }],
+    "frameworks": ["arduino"],
+    "platforms": ["atmelavr, esp8266, esp32"]
+  }
