@@ -16,6 +16,6 @@ begin	KEYWORD2
 read	KEYWORD2
 count   KEYWORD2
 getPulse    KEYWORD2
-getFloRate_s  KEYWORD2
-getFloRate_m   KEYWORD2
+getFlowRate_s  KEYWORD2
+getFlowRate_m   KEYWORD2
 getVolume   KEYWORD2
