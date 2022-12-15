@@ -22,12 +22,12 @@
  */
 FlowSensor_Arduino::FlowSensor_Arduino(uint8_t type ,uint8_t pin)
 {
-  this->_pin = pin;
-  this->_type = type;
+  _pin = pin;
+  _type = type;
   switch (this->_type)
   {
   case YFS201:
-    this->_pulse1liter = 450;
+    _pulse1liter = 450;
     break;
   
   default:

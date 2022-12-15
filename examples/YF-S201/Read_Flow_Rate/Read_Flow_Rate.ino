@@ -14,6 +14,7 @@
 #include <Arduino.h>
 #include <FlowSensor_Arduino.h>
 
+// pin -> interrupt pin
 FlowSensor_Arduino Sensor(YFS201, D2);
 int timebefore = 0;
 
