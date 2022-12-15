@@ -13,5 +13,5 @@
       "maintainer": true
     }],
     "frameworks": ["arduino"],
-    "platforms": ["atmelavr, esp8266, esp32"]
+    "platforms": ["*"]
   }
