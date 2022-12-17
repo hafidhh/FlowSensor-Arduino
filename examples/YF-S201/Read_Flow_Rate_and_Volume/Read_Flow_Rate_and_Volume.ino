@@ -9,13 +9,14 @@
  * 
  * Github :
  * https://github.com/hafidhh
+ * https://github.com/hafidhh/FlowSensor-Arduino
  */
 
 #include <Arduino.h>
-#include <FlowSensor_Arduino.h>
+#include <FlowSensor.h>
 
 // pin -> interrupt pin
-FlowSensor_Arduino Sensor(YFS201, D2);
+FlowSensor Sensor(YFS201, D2);
 int timebefore = 0;
 
 void count()

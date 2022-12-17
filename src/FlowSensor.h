@@ -1,5 +1,5 @@
 /**
- * @file FlowSensor_Arduino.h
+ * @file FlowSensor.h
  * @author Hafidh Hidayat (hafidhhidayat@hotmail.com)
  * @brief 
  * @version 1.0.0
@@ -9,16 +9,17 @@
  * 
  * Github :
  * https://github.com/hafidhh
+ * https://github.com/hafidhh/FlowSensor-Arduino
  */
 
-#ifndef FlowSensor_Arduino_h
-#define FlowSensor_Arduino_h
+#ifndef FlowSensor_h
+#define FlowSensor_h
 
 #include "Arduino.h"
 
 static const uint8_t YFS201{1};
 
-class FlowSensor_Arduino
+class FlowSensor
 {
 private:
   uint8_t _pin;
@@ -32,7 +33,7 @@ private:
   long _timebefore = 0;
 
 public:
-  FlowSensor_Arduino(uint8_t type ,uint8_t pin);
+  FlowSensor(uint8_t type ,uint8_t pin);
   uint8_t getPin();
   uint8_t getType();
   void begin(void (*userFunc)(void));

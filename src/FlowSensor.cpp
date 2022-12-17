@@ -1,5 +1,5 @@
 /**
- * @file FlowSensor_Arduino.cpp
+ * @file FlowSensor.cpp
  * @author Hafidh Hidayat (hafidhhidayat@hotmail.com)
  * @brief 
  * @version 1.0.0
@@ -9,18 +9,19 @@
  * 
  * Github :
  * https://github.com/hafidhh
+ * https://github.com/hafidhh/FlowSensor-Arduino
  */
 
 #include "Arduino.h"
-#include "FlowSensor_Arduino.h"
+#include "FlowSensor.h"
 
 /**
- * @brief Construct a new FlowSensor_Arduino::FlowSensor_Arduino object
+ * @brief Construct a new FlowSensor::FlowSensor object
  * 
  * @param type 
  * @param pin 
  */
-FlowSensor_Arduino::FlowSensor_Arduino(uint8_t type ,uint8_t pin)
+FlowSensor::FlowSensor(uint8_t type ,uint8_t pin)
 {
   _pin = pin;
   _type = type;
@@ -40,7 +41,7 @@ FlowSensor_Arduino::FlowSensor_Arduino(uint8_t type ,uint8_t pin)
  * 
  * @return uint8_t pin
  */
-uint8_t FlowSensor_Arduino::getPin()
+uint8_t FlowSensor::getPin()
 {
   return this->_pin;
 }
@@ -50,7 +51,7 @@ uint8_t FlowSensor_Arduino::getPin()
  * 
  * @return uint8_t sensor type
  */
-uint8_t FlowSensor_Arduino::getType()
+uint8_t FlowSensor::getType()
 {
   return this->_type;
 }
@@ -59,7 +60,7 @@ uint8_t FlowSensor_Arduino::getType()
  * @brief count pulse
  * 
  */
-void FlowSensor_Arduino::count()
+void FlowSensor::count()
 {
   this->_pulse++;
   this->_totalpulse++;
@@ -70,7 +71,7 @@ void FlowSensor_Arduino::count()
  * 
  * @param userFunc 
  */
-void FlowSensor_Arduino::begin(void (*userFunc)(void))
+void FlowSensor::begin(void (*userFunc)(void))
 {
   pinMode(this->_pin, INPUT);
   digitalWrite(this->_pin, HIGH); // Optional Internal Pull-Up
@@ -82,7 +83,7 @@ void FlowSensor_Arduino::begin(void (*userFunc)(void))
  * 
  * @param calibration 
  */
-void FlowSensor_Arduino::read(int calibration)
+void FlowSensor::read(int calibration)
 {
   this->_flowratesecound = (this->_pulse / (this->_pulse1liter + calibration)) / ((millis() - _timebefore) / 1000);
   this->_volume += (this->_pulse / (this->_pulse1liter + calibration));
@@ -94,7 +95,7 @@ void FlowSensor_Arduino::read(int calibration)
  * 
  * @return int total pulse
  */
-int FlowSensor_Arduino::getPulse()
+int FlowSensor::getPulse()
 {
   return this->_totalpulse;
 }
@@ -104,7 +105,7 @@ int FlowSensor_Arduino::getPulse()
  * 
  * @return float flow rate / minute
  */
-float FlowSensor_Arduino::getFlowRate_m()
+float FlowSensor::getFlowRate_m()
 {
   this->_flowrateminute = this->_flowratesecound * 60;
   return this->_flowrateminute;
@@ -115,7 +116,7 @@ float FlowSensor_Arduino::getFlowRate_m()
  * 
  * @return float flow rate / secound
  */
-float FlowSensor_Arduino::getFlowRate_s()
+float FlowSensor::getFlowRate_s()
 {
   return this->_flowratesecound;
 }
@@ -125,7 +126,7 @@ float FlowSensor_Arduino::getFlowRate_s()
  * 
  * @return float volume
  */
-float FlowSensor_Arduino::getVolume()
+float FlowSensor::getVolume()
 {
   return this->_volume;
 }
