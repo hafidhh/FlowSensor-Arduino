@@ -2,7 +2,7 @@
     "name": "FlowSensor-Arduino",
     "version": "1.0.0",
     "keywords": "sensor, arduino",
-    "description": "Water Flow, Water Volume, YF-S201",
+    "description": "Water Flow Rate, Water Volume, YF-S201",
     "repository": {
       "type": "git",
       "url": "https://github.com/hafidhh/FlowSensor-Arduino"
