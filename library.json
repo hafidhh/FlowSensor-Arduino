@@ -1,5 +1,5 @@
 {
-    "name": "FlowSensor-Arduino",
+    "name": "FlowSensor",
     "version": "1.0.0",
     "keywords": "sensor, arduino",
     "description": "Water Flow Rate, Water Volume, YF-S201",
