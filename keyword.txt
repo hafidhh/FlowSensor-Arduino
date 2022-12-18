@@ -1,12 +1,12 @@
 ###########################################
-# Syntax Coloring Map For FlowSensor-Arduino
+# Syntax Coloring Map For FlowSensor
 ###########################################
 
 ###########################################
 # Datatypes (KEYWORD1)
 ###########################################
 
-#FlowSensor_Arduino KEYWORD1
+#FlowSensor KEYWORD1
 
 ###########################################
 # Methods and Functions (KEYWORD2)
