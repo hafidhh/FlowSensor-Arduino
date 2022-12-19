@@ -3,7 +3,7 @@
 Arduino library for Flow Sensor, YF-S201   
 ### Volume Formula   
 ```math
-Volume = {Total Pulse \over Pulse1Liter}
+Volume (L) = {Total Pulse \over Pulse1Liter}
 ```
 ### Flowrate Formula   
 ```math
