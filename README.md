@@ -6,7 +6,9 @@ Volume = {Total Pulse \over Pulse1Liter}
 ```
 Flowrate Formula   
 ```math
-Q = {Frequecy \over Pulse1Liter}60   
+Q = {Frequecy \over Pulse1Liter}60
+```
+```math
 Q = {Pulse/Time \over Pulse1Liter}60
 ```
 Q = Flowrate (Liter/minute)   
