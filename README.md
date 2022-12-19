@@ -1,5 +1,10 @@
 # Water Flow Sensor Library Arduino
 ## Description
+[![arduino-library-badge](https://www.ardu-badge.com/badge/FlowSensor.svg?)](https://www.ardu-badge.com/FlowSensor)
+[![PlatformIO Registry](https://badges.registry.platformio.org/packages/hafidh/library/FlowSensor.svg)](https://registry.platformio.org/libraries/hafidh/FlowSensor)
+[![GitHub release](https://img.shields.io/github/release/hafidhh/FlowSensor-Arduino.svg)](https://github.com/hafidhh/FlowSensor-Arduino/releases)
+[![GitHub](https://img.shields.io/github/license/hafidhh/FlowSensor-Arduino.svg)](https://github.com/hafidhh/FlowSensor-Arduino/blob/master/LICENSE.md)
+   
 Arduino library for Flow Sensor, YF-S201   
 ### Volume Formula   
 ```math
