@@ -19,6 +19,13 @@
 FlowSensor Sensor(YFS201, D2);
 int timebefore = 0;
 
+// Uncomment if use ESP8266 and ESP32
+// void IRAM_ATTR count()
+// {
+//   Sensor.count();
+// }
+
+// Comment if use ESP8266 and ESP32
 void count()
 {
   Sensor.count();

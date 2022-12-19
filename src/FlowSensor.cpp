@@ -74,7 +74,7 @@ void FlowSensor::count()
 void FlowSensor::begin(void (*userFunc)(void))
 {
   pinMode(this->_pin, INPUT);
-  digitalWrite(this->_pin, HIGH); // Optional Internal Pull-Up
+  digitalWrite(this->_pin, INPUT_PULLUP); // Optional Internal Pull-Up
   attachInterrupt(this->_pin, userFunc, RISING);
 }
 
