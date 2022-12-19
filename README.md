@@ -1,10 +1,11 @@
 # Water Flow Sensor Library Arduino
+## Description
 Arduino library for Flow Sensor, YF-S201   
-Volume Formula   
+### Volume Formula   
 ```math
 Volume = {Total Pulse \over Pulse1Liter}
 ```
-Flowrate Formula   
+### Flowrate Formula   
 ```math
 Q = {Frequecy \over Pulse1Liter}60
 ```
