@@ -75,7 +75,7 @@ void FlowSensor::begin(void (*userFunc)(void))
 {
   pinMode(this->_pin, INPUT);
   digitalWrite(this->_pin, INPUT_PULLUP); // Optional Internal Pull-Up
-  attachInterrupt(this->_pin, userFunc, RISING);
+  attachInterrupt(digitalPinToInterrupt(this->_pin), userFunc, RISING); // For better compatibility with any board, for example Arduino Leonardo Boards
 }
 
 /**

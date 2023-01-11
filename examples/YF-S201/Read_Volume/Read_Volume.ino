@@ -17,7 +17,7 @@
 
 // pin -> interrupt pin
 FlowSensor Sensor(YFS201, D2);
-int timebefore = 0;
+unsigned long timebefore = 0; // same type as millis()
 
 // Uncomment if use ESP8266 and ESP32
 // void IRAM_ATTR count()
