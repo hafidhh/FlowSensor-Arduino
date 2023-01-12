@@ -2,8 +2,6 @@
  * @file Read_Volume.ino
  * @author Hafidh Hidayat (hafidhhidayat@hotmail.com)
  * @brief 
- * @version 1.0.0
- * @date 2022-12-12
  * 
  * @copyright Copyright (c) 2022
  * 
