@@ -13,6 +13,14 @@
 #include <Arduino.h>
 #include <FlowSensor.h>
 
+// Sensor Type
+// YFS201;
+// YFB1;
+// OF10ZAT;
+// OF10ZZT;
+// OF05ZAT;
+// OF05ZZT;
+
 // pin -> interrupt pin
 FlowSensor Sensor(YFS201, D2);
 unsigned long timebefore = 0; // same type as millis()

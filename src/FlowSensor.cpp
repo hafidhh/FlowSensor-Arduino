@@ -28,6 +28,18 @@ FlowSensor::FlowSensor(uint8_t type ,uint8_t pin)
   case YFS201:
     _pulse1liter = 450;
     break;
+
+  case YFB1:
+    _pulse1liter = 660;
+    break;
+
+  case OF10ZAT:
+    _pulse1liter = 400;
+    break;
+
+  case OF05ZAT:
+    _pulse1liter = 2174;
+    break;
   
   default:
     break;
