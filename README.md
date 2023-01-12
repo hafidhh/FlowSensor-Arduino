@@ -21,6 +21,16 @@ Q = {Pulse/Time \over Pulse1Liter}60
 ```
 Q = Flowrate (Liter/minute)   
 
+## Sensor
+|  Sensor Type  |  Code   |
+| ------------- | ------- |
+| YF-S201       | YFS201  |
+| YF-B1         | YFB1    |
+| OF10ZAT       | OF10ZAT |
+| OF10ZZT       | OF10ZZT |
+| OF05ZAT       | OF05ZAT |
+| OF05ZZT       | OF05ZZT |
+
 ## Usages
 See [all axemples](https://github.com/hafidhh/FlowSensor-Arduino/tree/master/examples)
 
