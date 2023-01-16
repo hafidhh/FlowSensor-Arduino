@@ -24,8 +24,8 @@ class FlowSensor
 private:
   uint8_t _pin;
   uint8_t _type;
-  int _totalpulse;
-  int _pulse;
+  unsigned long _totalpulse;
+  unsigned long _pulse;
   float _pulse1liter;
   float _flowrateminute;
   float _flowratesecound;
@@ -39,7 +39,7 @@ public:
   void begin(void (*userFunc)(void));
   void read(int calibration = 0);
   void count();
-  int getPulse();
+  unsigned long getPulse();
   float getFlowRate_m();
   float getFlowRate_s();
   float getVolume();
