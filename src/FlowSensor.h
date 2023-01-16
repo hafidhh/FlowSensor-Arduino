@@ -24,8 +24,8 @@ class FlowSensor
 private:
   uint8_t _pin;
   uint8_t _type;
-  unsigned long _totalpulse;
-  unsigned long _pulse;
+  volatile unsigned long _totalpulse;
+  volatile unsigned long _pulse;
   float _pulse1liter;
   float _flowrateminute;
   float _flowratesecound;
