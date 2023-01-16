@@ -93,9 +93,9 @@ void FlowSensor::read(int calibration)
 /**
  * @brief 
  * 
- * @return int total pulse
+ * @return unsigned long totalpulse
  */
-int FlowSensor::getPulse()
+unsigned long FlowSensor::getPulse()
 {
   return this->_totalpulse;
 }
