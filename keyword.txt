@@ -12,6 +12,8 @@
 # Methods and Functions (KEYWORD2)
 ###########################################
 
+getPin  KEYWORD2
+getType KEYWORD2
 begin	KEYWORD2
 read	KEYWORD2
 count   KEYWORD2
