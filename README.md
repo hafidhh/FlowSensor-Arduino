@@ -32,7 +32,7 @@ Q = Flowrate (Liter/minute)
 | OF05ZZT       | OF05ZZT |
 
 ## Usages
-See [all axemples](https://github.com/hafidhh/FlowSensor-Arduino/tree/master/examples)
+See [all examples](https://github.com/hafidhh/FlowSensor-Arduino/tree/master/examples)
 
 ### initialization
 ```cpp
@@ -64,7 +64,7 @@ void count()
 ### Get Total Pulse
 return **`total pulse`**
 ```cpp
-int getPulse()
+unsigned long getPulse()
 ```
 
 ### Get Flowrate (L/s)
