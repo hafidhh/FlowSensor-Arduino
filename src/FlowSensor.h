@@ -30,6 +30,7 @@ private:
   volatile unsigned long _totalpulse;
   volatile unsigned long _pulse;
   float _pulse1liter;
+  float _flowratehour;
   float _flowrateminute;
   float _flowratesecound;
   float _volume;
@@ -43,6 +44,7 @@ public:
   void read(int calibration = 0);
   void count();
   unsigned long getPulse();
+  float getFlowRate_h();
   float getFlowRate_m();
   float getFlowRate_s();
   float getVolume();

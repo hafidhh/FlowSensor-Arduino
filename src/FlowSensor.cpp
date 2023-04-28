@@ -110,6 +110,12 @@ unsigned long FlowSensor::getPulse()
   return this->_totalpulse;
 }
 
+float FlowSensor::getFlowRate_h()
+{
+  this->_flowratehour = this->_flowratesecound * 3600;
+  return this->_flowratehour;
+}
+
 /**
  * @brief 
  * 
