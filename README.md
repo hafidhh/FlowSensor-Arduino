@@ -79,6 +79,12 @@ return **`Flowrate`** (L/m)
 float getFlowRate_m() 
 ```
 
+### Get Flowrate (L/h)
+return **`Flowrate`** (L/h)
+```cpp
+float getFlowRate_h() 
+```
+
 ### Get Total Volume (L)
 return **`Volume`** (L)
 ```cpp
