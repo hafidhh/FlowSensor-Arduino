@@ -1,17 +1,17 @@
 {
-    "name": "FlowSensor",
-    "version": "1.1.1",
-    "keywords": "sensor, arduino",
-    "description": "Water Flow Rate, Water Volume",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/hafidhh/FlowSensor-Arduino"
-    },
-    "authors": [{
-      "name": "hafidhh",
-      "email": "hafidhhidayat@hotmail.com",
-      "maintainer": true
-    }],
-    "frameworks": ["arduino"],
-    "platforms": ["*"]
-  }
+		"name": "FlowSensor",
+		"version": "1.2.0",
+		"keywords": "sensor, arduino",
+		"description": "Water Flow Rate, Water Volume",
+		"repository": {
+			"type": "git",
+			"url": "https://github.com/hafidhh/FlowSensor-Arduino"
+		},
+		"authors": [{
+			"name": "hafidhh",
+			"email": "hafidhhidayat@hotmail.com",
+			"maintainer": true
+		}],
+		"frameworks": ["arduino"],
+		"platforms": ["*"]
+	}

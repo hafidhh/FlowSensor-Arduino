@@ -84,3 +84,9 @@ return **`Volume`** (L)
 ```cpp
 float getVolume()
 ```  
+
+### Get Total Volume (L)
+return **`Volume`** (L)
+```cpp
+float resetVolume()
+```  

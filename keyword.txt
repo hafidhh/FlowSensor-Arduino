@@ -21,3 +21,4 @@ getPulse    KEYWORD2
 getFlowRate_s  KEYWORD2
 getFlowRate_m   KEYWORD2
 getVolume   KEYWORD2
+resetVolume KEYWORD2
