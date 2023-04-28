@@ -25,29 +25,30 @@ static const uint8_t OF05ZZT{4};
 class FlowSensor
 {
 private:
-  uint8_t _pin;
-  uint8_t _type;
-  volatile unsigned long _totalpulse;
-  volatile unsigned long _pulse;
-  float _pulse1liter;
-  float _flowratehour;
-  float _flowrateminute;
-  float _flowratesecound;
-  float _volume;
-  long _timebefore = 0;
+	uint8_t _pin;
+	uint8_t _type;
+	volatile unsigned long _totalpulse;
+	volatile unsigned long _pulse;
+	float _pulse1liter;
+	float _flowratehour;
+	float _flowrateminute;
+	float _flowratesecound;
+	float _volume;
+	long _timebefore = 0;
 
 public:
-  FlowSensor(uint8_t type ,uint8_t pin);
-  uint8_t getPin();
-  uint8_t getType();
-  void begin(void (*userFunc)(void));
-  void read(int calibration = 0);
-  void count();
-  unsigned long getPulse();
-  float getFlowRate_h();
-  float getFlowRate_m();
-  float getFlowRate_s();
-  float getVolume();
+	FlowSensor(uint8_t type ,uint8_t pin);
+	uint8_t getPin();
+	uint8_t getType();
+	void begin(void (*userFunc)(void));
+	void read(int calibration = 0);
+	void count();
+	unsigned long getPulse();
+	float getFlowRate_h();
+	float getFlowRate_m();
+	float getFlowRate_s();
+	float getVolume();
+	float resetVolume();
 };
 
 #endif

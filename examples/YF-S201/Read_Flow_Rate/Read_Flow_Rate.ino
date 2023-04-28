@@ -34,20 +34,20 @@ unsigned long timebefore = 0; // Same type as millis()
 // Comment if use ESP8266 and ESP32
 void count()
 {
-  Sensor.count();
+	Sensor.count();
 }
 
 void setup() {
-  Serial.begin(115200);
-  Sensor.begin(count);
+	Serial.begin(115200);
+	Sensor.begin(count);
 }
 
 void loop() {
-  if (millis() - timebefore >= 1000)
-  {
-    Sensor.read();
-    Serial.print("Flow rate (L/minute) : ");
-    Serial.println(Sensor.getFlowRate_m());
-    timebefore = millis();
-  }
+	if (millis() - timebefore >= 1000)
+	{
+		Sensor.read();
+		Serial.print("Flow rate (L/minute) : ");
+		Serial.println(Sensor.getFlowRate_m());
+		timebefore = millis();
+	}
 }
