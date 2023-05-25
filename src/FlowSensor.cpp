@@ -10,70 +10,18 @@
  * https://github.com/hafidhh/FlowSensor-Arduino
  */
 
-#include "Arduino.h"
 #include "FlowSensor.h"
 
 /**
  * @brief Construct a new FlowSensor::FlowSensor object
  * 
- * @param type 
- * @param pin 
+ * @param type Sensor Type
+ * @param pin Interrupt Pin
  */
-FlowSensor::FlowSensor(uint8_t type ,uint8_t pin)
+FlowSensor::FlowSensor(uint16_t type ,uint8_t pin)
 {
-	_pin = pin;
-	_type = type;
-	switch (this->_type)
-	{
-	case YFS201:
-		_pulse1liter = 450;
-		break;
-
-	case YFB1:
-		_pulse1liter = 660;
-		break;
-
-	case OF10ZAT:
-		_pulse1liter = 400;
-		break;
-
-	case OF05ZAT:
-		_pulse1liter = 2174;
-		break;
-	
-	default:
-		break;
-	}
-}
-
-/**
- * @brief 
- * 
- * @return uint8_t pin
- */
-uint8_t FlowSensor::getPin()
-{
-	return this->_pin;
-}
-
-/**
- * @brief 
- * 
- * @return uint8_t sensor type
- */
-uint8_t FlowSensor::getType()
-{
-	return this->_type;
-}
-
-/**
- * @brief count pulse
- * 
- */
-void FlowSensor::count()
-{
-	this->_pulse++;
-	this->_totalpulse++;
+	this->_pin = pin;
+	this->_pulse1liter = type;
 }
 
 /**
@@ -89,15 +37,26 @@ void FlowSensor::begin(void (*userFunc)(void))
 }
 
 /**
+ * @brief count pulse
+ * 
+ */
+void FlowSensor::count()
+{
+	this->_pulse++;
+}
+
+/**
  * @brief
  * 
- * @param calibration 
+ * @param calibration Calibration pulse/liter
  */
-void FlowSensor::read(int calibration)
+void FlowSensor::read(long calibration)
 {
 	this->_flowratesecound = (this->_pulse / (this->_pulse1liter + calibration)) / ((millis() - _timebefore) / 1000);
 	this->_volume += (this->_pulse / (this->_pulse1liter + calibration));
+	this->_totalpulse += this->_pulse;
 	this->_pulse = 0;
+	this->_timebefore = millis();
 }
 
 /**
@@ -110,6 +69,21 @@ unsigned long FlowSensor::getPulse()
 	return this->_totalpulse;
 }
 
+/**
+ * @brief Reset pulse count
+ * 
+ */
+void FlowSensor::resetPulse()
+{
+	this->_pulse=0;
+	this->_totalpulse=0;
+}
+
+/**
+ * @brief 
+ * 
+ * @return float flow rate / hour
+ */
 float FlowSensor::getFlowRate_h()
 {
 	this->_flowratehour = this->_flowratesecound * 3600;
@@ -147,7 +121,11 @@ float FlowSensor::getVolume()
 	return this->_volume;
 }
 
-float FlowSensor::resetVolume()
+/**
+ * @brief reset Volume
+ * 
+ */
+void FlowSensor::resetVolume()
 {
 	this->_volume = 0;
 }
