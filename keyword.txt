@@ -6,20 +6,19 @@
 # Datatypes (KEYWORD1)
 ###########################################
 
-#FlowSensor KEYWORD1
+FlowSensor	KEYWORD1
 
 ###########################################
 # Methods and Functions (KEYWORD2)
 ###########################################
 
-getPin  KEYWORD2
-getType KEYWORD2
 begin	KEYWORD2
 read	KEYWORD2
-count   KEYWORD2
-getPulse    KEYWORD2
-getFlowRate_s  KEYWORD2
-getFlowRate_m   KEYWORD2
-getFlowRate_h   KEYWORD2
-getVolume   KEYWORD2
-resetVolume KEYWORD2
+count	KEYWORD2
+getPulse	KEYWORD2
+resetPulse	KEYWORD2
+getFlowRate_s	KEYWORD2
+getFlowRate_m	KEYWORD2
+getFlowRate_h	KEYWORD2
+getVolume	KEYWORD2
+resetVolume	KEYWORD2
