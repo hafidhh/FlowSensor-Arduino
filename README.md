@@ -2,7 +2,7 @@
 [![arduino-library-badge](https://www.ardu-badge.com/badge/FlowSensor.svg?)](https://www.ardu-badge.com/FlowSensor)
 [![PlatformIO Registry](https://badges.registry.platformio.org/packages/hafidh/library/FlowSensor.svg)](https://registry.platformio.org/libraries/hafidh/FlowSensor)
 [![GitHub release](https://img.shields.io/github/release/hafidhh/FlowSensor-Arduino.svg)](https://github.com/hafidhh/FlowSensor-Arduino/releases)
-[![GitHub](https://img.shields.io/github/license/hafidhh/FlowSensor-Arduino.svg)](https://github.com/hafidhh/FlowSensor-Arduino/blob/master/LICENSE.md)
+[![License](https://img.shields.io/github/license/hafidhh/FlowSensor-Arduino.svg)](https://github.com/hafidhh/FlowSensor-Arduino/blob/master/LICENSE.md)
 
 ## Description   
 Arduino library for Flow Sensor
@@ -151,8 +151,7 @@ Sensor.resetVolume()
 ```  
 
 ## Support
-you can support me by gave star to this project or you can supoort me by donating on github
+You can support me by gave star to this project or you can supoort me by donating
 
-or
-
-<a href="https://www.buymeacoffee.com/hafidh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+[![Github-sponsors](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/hafidhh)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/hafidh)
