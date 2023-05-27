@@ -3,96 +3,156 @@
 [![PlatformIO Registry](https://badges.registry.platformio.org/packages/hafidh/library/FlowSensor.svg)](https://registry.platformio.org/libraries/hafidh/FlowSensor)
 [![GitHub release](https://img.shields.io/github/release/hafidhh/FlowSensor-Arduino.svg)](https://github.com/hafidhh/FlowSensor-Arduino/releases)
 [![GitHub](https://img.shields.io/github/license/hafidhh/FlowSensor-Arduino.svg)](https://github.com/hafidhh/FlowSensor-Arduino/blob/master/LICENSE.md)
-## Description
-   
-Arduino library for Flow Sensor, YF-S201   
+
+## Description   
+Arduino library for Flow Sensor
 
 ### Volume Formula   
 ```math
-Volume (L) = {Total Pulse \over Pulse1Liter}
+Volume (L) = {Total Pulse \over Pulse/Liter}
 ```
 
-### Flowrate Formula   
+### Flow rate Formula   
 ```math
-Q = {Frequency \over Pulse1Liter}60
+Q = {Frequency \over Pulse/Liter}60
 ```
 ```math
-Q = {Pulse/Time \over Pulse1Liter}60
+Q = {Pulse/Time \over Pulse/Liter}60
 ```
 Q = Flowrate (Liter/minute)   
 
+## Features
+* Get Volume in Liter
+* Get Flow Rate in Liter/Secound
+* Get Flow Rate in Liter/Minute
+* Get Flow Rate in Liter/hour
+* Count Pulse and get Value
+
+## Tested Devices
+* Arduino Nano ATMega328P
+* NodeMCU ESP8266
+* NodeMCu ESP32
+* LGT8F32P (Logic Green)
+
+## Installation
+### Using Library Manager
+#### Arduino
+At Arduino IDE, go to menu Sketch -> Include Library -> Manage Libraries...
+
+In Library Manager Window, search "flowsensor" in the search form then select "FlowSensor".
+
+Click "Install" button.  
+
+#### Platform IO
+For PlatformIO IDE, using the following command.
+
+Or at PIO Home -> Library -> Registry then search FlowSensor.
+
+### Manual Installation
+For Arduino IDE, download zip file from the repository (Github page) by select Code dropdown at the top of repository, select Download ZIP
+
+From Arduino IDE, select menu Sketch -> Include Library -> Add .ZIP Library....
+
+Choose FlowSensor-Arduino-master.zip that previously downloaded.
+
 ## Sensor
-|  Sensor Type  |  Code   |
-| ------------- | ------- |
-| YF-S201       | YFS201  |
-| YF-B1         | YFB1    |
-| OF10ZAT       | OF10ZAT |
-| OF10ZZT       | OF10ZZT |
-| OF05ZAT       | OF05ZAT |
-| OF05ZZT       | OF05ZZT |
+|  Sensor Type  |  Code   | Pulse/Liter |
+| ------------- | ------- | ----------- |
+| YF-S201       | YFS201  | 450         |
+| YF-B1         | YFB1    | 600         |
+| OF10ZAT       | OF10ZAT | 400         |
+| OF10ZZT       | OF10ZZT | 400         |
+| OF05ZAT       | OF05ZAT | 2174        |
+| OF05ZZT       | OF05ZZT | 2174        |
+
+## Add New Sensor
+If you want to add new sensor you can edit [FlowSensor_Type.h](https://github.com/hafidhh/FlowSensor-Arduino/blob/master/src/FlowSensor_Type.h) file in src and create pull request or you can use dynamic declaration.
 
 ## Usages
-See [all examples](https://github.com/hafidhh/FlowSensor-Arduino/tree/master/examples)
+See [all examples](https://github.com/hafidhh/FlowSensor-Arduino/blob/master/examples)
 
-### initialization
+### Initialization
+If your sensor is not available in sensor list you can use dynamic declaration by use sensor pulse/liter in type, example 450 for YF-S201.
 ```cpp
 #include <FlowSensor_Arduino.h>
 
-uint8_t type = YFS201; // type : Sensor type
+uint16_t type = YFS201; // type : Sensor type or pulse/liter
+// uint16_t type = 450;
 uint8_t pin = D2; // pin : interrupt pin
 
-FlowSensor_Arduino Sensor(type, pin);
+FlowSensor Sensor(type, pin);
 ```
+or if you sensor is not available in sensor list you can use pulse/liter sensor in type.
 
 ### Sensor begin
-param **`userFunc`** 
+param **`userFunc`**
 ```cpp
-void begin(void (*userFunc)(void))
+void count()
+{
+    Sensor.count();
+}
+
+void setup()
+{
+    Sensor.begin(count());
+}
 ```
 
 ### Sensor Read
-param **`calibration`**
 ```cpp
-void read(int calibration)
+Sensor.read()
 ```
 
 ### Count Pulse
 ```cpp
-void count()
+Sensor.count()
 ```
 
 ### Get Total Pulse
 return **`total pulse`**
 ```cpp
-unsigned long getPulse()
+Sensor.getPulse()
+```
+
+### Reset Pulse
+set pulse value to 0
+```cpp
+Sensor.resetPulse()
 ```
 
 ### Get Flowrate (L/s)
 return **`Flowrate`** (L/s)
 ```cpp
-float getFlowRate_s()
+Sensor.getFlowRate_s()
 ```
 
 ### Get Flowrate (L/m)
 return **`Flowrate`** (L/m)
 ```cpp
-float getFlowRate_m() 
+Sensor.getFlowRate_m() 
 ```
 
 ### Get Flowrate (L/h)
 return **`Flowrate`** (L/h)
 ```cpp
-float getFlowRate_h() 
+Sensor.getFlowRate_h() 
 ```
 
 ### Get Total Volume (L)
 return **`Volume`** (L)
 ```cpp
-float getVolume()
+Sensor.getVolume()
 ```  
 
-### Get Total Volume (L)
-return **`Volume`** (L)
+### Reset Volume (L)
+set volume value to 0
 ```cpp
-float resetVolume()
+Sensor.resetVolume()
 ```  
+
+## Support
+you can support me by gave star to this project or you can supoort me by donating on github
+
+or
+
+<a href="https://www.buymeacoffee.com/hafidh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
