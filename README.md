@@ -4,6 +4,9 @@
 [![GitHub release](https://img.shields.io/github/release/hafidhh/FlowSensor-Arduino.svg)](https://github.com/hafidhh/FlowSensor-Arduino/releases)
 [![License](https://img.shields.io/github/license/hafidhh/FlowSensor-Arduino.svg)](https://github.com/hafidhh/FlowSensor-Arduino/blob/master/LICENSE.md)
 
+[![Github-sponsors](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/hafidhh)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/hafidh)
+
 ## Description   
 Arduino library for Flow Sensor
 
@@ -149,9 +152,3 @@ set volume value to 0
 ```cpp
 Sensor.resetVolume()
 ```  
-
-## Support
-You can support me by gave star to this project or you can supoort me by donating
-
-[![Github-sponsors](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/hafidhh)
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/hafidh)
