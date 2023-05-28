@@ -4,10 +4,7 @@
 [![GitHub release](https://img.shields.io/github/release/hafidhh/FlowSensor-Arduino.svg)](https://github.com/hafidhh/FlowSensor-Arduino/releases)
 [![License](https://img.shields.io/github/license/hafidhh/FlowSensor-Arduino.svg)](https://github.com/hafidhh/FlowSensor-Arduino/blob/master/LICENSE.md)
 
-[![Github-sponsors](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/hafidhh)
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/hafidh)
-
-## Description   
+## 🚀 Description   
 Arduino library for Flow Sensor
 
 ### Volume Formula   
@@ -24,20 +21,20 @@ Q = {Pulse/Time \over Pulse/Liter}60
 ```
 Q = Flowrate (Liter/minute)   
 
-## Features
+## 🔥 Features
 * Get Volume in Liter
 * Get Flow Rate in Liter/Secound
 * Get Flow Rate in Liter/Minute
 * Get Flow Rate in Liter/hour
 * Count Pulse and get Value
 
-## Tested Devices
+## ✨ Tested Devices
 * Arduino Nano ATMega328P
 * NodeMCU ESP8266
 * NodeMCu ESP32
 * LGT8F32P (Logic Green)
 
-## Installation
+## 💻 Installation
 ### Using Library Manager
 #### Arduino
 At Arduino IDE, go to menu Sketch -> Include Library -> Manage Libraries...
@@ -58,7 +55,7 @@ From Arduino IDE, select menu Sketch -> Include Library -> Add .ZIP Library....
 
 Choose FlowSensor-Arduino-master.zip that previously downloaded.
 
-## Sensor
+## 🔥 Sensor
 |  Sensor Type  |  Code   | Pulse/Liter |
 | ------------- | ------- | ----------- |
 | YF-S201       | YFS201  | 450         |
@@ -68,10 +65,10 @@ Choose FlowSensor-Arduino-master.zip that previously downloaded.
 | OF05ZAT       | OF05ZAT | 2174        |
 | OF05ZZT       | OF05ZZT | 2174        |
 
-## Add New Sensor
+## ✨ Add New Sensor
 If you want to add new sensor you can edit [FlowSensor_Type.h](https://github.com/hafidhh/FlowSensor-Arduino/blob/master/src/FlowSensor_Type.h) file in src and create pull request or you can use dynamic declaration.
 
-## Usages
+## 💻 Usages
 See [all examples](https://github.com/hafidhh/FlowSensor-Arduino/blob/master/examples)
 
 ### Initialization
@@ -152,3 +149,18 @@ set volume value to 0
 ```cpp
 Sensor.resetVolume()
 ```  
+
+## 🛡️ License
+This project is licensed under the MIT License - see the [`LICENSE`](LICENSE) file for details.
+
+## 🙏 Support
+We all need support and motivation. Please give this project a ⭐️ to encourage and show that you liked it. Don't forget to leave a star ⭐️ before you move away.
+
+If you found the app helpful, consider supporting us with a coffee.
+
+<a href="https://github.com/sponsors/hafidhh">
+    <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA">
+</a>
+<a href="https://www.buymeacoffee.com/hafidh">
+    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black">
+</a>
