@@ -32,7 +32,7 @@ Q = Flowrate (Liter/minute)
 * Arduino Nano ATMega328P
 * NodeMCU ESP8266
 * NodeMCu ESP32
-* LGT8F32P (Logic Green)
+* LGT8F328P (Logic Green)
 
 ## 💻 Installation
 ### Using Library Manager
