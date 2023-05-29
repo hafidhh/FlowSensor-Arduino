@@ -1,8 +1,8 @@
 # Water Flow Sensor Library Arduino
-[![arduino-library-badge](https://www.ardu-badge.com/badge/FlowSensor.svg)](https://www.ardu-badge.com/FlowSensor)
-[![PlatformIO Registry](https://badges.registry.platformio.org/packages/hafidh/library/FlowSensor.svg)](https://registry.platformio.org/libraries/hafidh/FlowSensor)
-[![GitHub release](https://img.shields.io/github/release/hafidhh/FlowSensor-Arduino.svg)](https://github.com/hafidhh/FlowSensor-Arduino/releases)
-[![License](https://img.shields.io/github/license/hafidhh/FlowSensor-Arduino.svg)](https://github.com/hafidhh/FlowSensor-Arduino/blob/master/LICENSE.md)
+[![arduino-library-badge](https://www.ardu-badge.com/badge/FlowSensor.svg)](https://www.ardu-badge.com/FlowSensor?)
+[![PlatformIO Registry](https://badges.registry.platformio.org/packages/hafidh/library/FlowSensor.svg?)](https://registry.platformio.org/libraries/hafidh/FlowSensor)
+[![GitHub release](https://img.shields.io/github/release/hafidhh/FlowSensor-Arduino.svg?)](https://github.com/hafidhh/FlowSensor-Arduino/releases)
+[![License](https://img.shields.io/github/license/hafidhh/FlowSensor-Arduino.svg?)](https://github.com/hafidhh/FlowSensor-Arduino/blob/master/LICENSE.md)
 
 ## 🚀 Description   
 Arduino library for Flow Sensor
