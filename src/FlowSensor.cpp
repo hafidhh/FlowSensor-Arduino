@@ -52,7 +52,7 @@ void FlowSensor::count()
  */
 void FlowSensor::read(long calibration)
 {
-	this->_flowratesecound = (this->_pulse / (this->_pulse1liter + calibration)) / ((millis() - _timebefore) / 1000);
+	this->_flowratesecound = (this->_pulse / (this->_pulse1liter + calibration)) / ((millis() - this->_timebefore) / 1000);
 	this->_volume += (this->_pulse / (this->_pulse1liter + calibration));
 	this->_totalpulse += this->_pulse;
 	this->_pulse = 0;
