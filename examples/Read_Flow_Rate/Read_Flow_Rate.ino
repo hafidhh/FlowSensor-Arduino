@@ -21,8 +21,10 @@
 // OF05ZAT;
 // OF05ZZT;
 
-// pin -> interrupt pin
-FlowSensor Sensor(YFS201, D2);
+#define type YFS201
+#define pin D2 // pin -> interrupt pin
+
+FlowSensor Sensor(type, pin);
 unsigned long timebefore = 0; // Same type as millis()
 
 // Uncomment if use ESP8266 and ESP32
