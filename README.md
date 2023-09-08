@@ -74,7 +74,7 @@ See [all examples](https://github.com/hafidhh/FlowSensor-Arduino/blob/master/exa
 ### Initialization
 If your sensor is not available in sensor list you can use dynamic declaration by use sensor pulse/liter in type, example 450 for YF-S201.
 ```cpp
-#include <FlowSensor_Arduino.h>
+#include <FlowSensor.h>
 
 uint16_t type = YFS201; // type : Sensor type or pulse/liter
 // uint16_t type = 450;
