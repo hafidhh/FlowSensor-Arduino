@@ -59,7 +59,7 @@ Choose FlowSensor-Arduino-master.zip that previously downloaded.
 |  Sensor Type  |  Code   | Pulse/Liter |
 | ------------- | ------- | ----------: |
 | YF-S201       | YFS201  |         450 |
-| YF-B1         | YFB1    |         600 |
+| YF-B1         | YFB1    |         660 |
 | OF10ZAT       | OF10ZAT |         400 |
 | OF10ZZT       | OF10ZZT |         400 |
 | OF05ZAT       | OF05ZAT |        2174 |
