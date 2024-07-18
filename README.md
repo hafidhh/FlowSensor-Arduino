@@ -64,6 +64,7 @@ Choose FlowSensor-Arduino-master.zip that previously downloaded.
 | OF10ZZT       | OF10ZZT |         400 |
 | OF05ZAT       | OF05ZAT |        2174 |
 | OF05ZZT       | OF05ZZT |        2174 |
+| YF-B1-S       | YFB1S   |        1077 |
 
 ## ✨ Add New Sensor
 If you want to add new sensor you can edit [FlowSensor_Type.h](https://github.com/hafidhh/FlowSensor-Arduino/blob/master/src/FlowSensor_Type.h) file in src and create pull request or you can use dynamic declaration.
