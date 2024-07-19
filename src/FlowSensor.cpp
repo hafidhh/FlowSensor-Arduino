@@ -25,14 +25,39 @@ FlowSensor::FlowSensor(uint16_t type ,uint8_t pin)
 }
 
 /**
- * @brief 
+ * @brief setType, change type
+ * 
+ * @param type 
+ */
+void FlowSensor::setType(uint16_t type)
+{
+	this->_pulse1liter = type;
+}
+
+/**
+ * @brief setPin, change pin
+ * 
+ * @param pin 
+ */
+void FlowSensor::setPin(uint8_t pin)
+{
+	detachInterrupt(this->_pin);
+	this->_pin = pin;
+}
+
+/**
+ * @brief sensor begin
  * 
  * @param userFunc 
+ * @param pullup default value is fasle (0), if you have external pull up you can set to true (1)
  */
-void FlowSensor::begin(void (*userFunc)(void))
+void FlowSensor::begin(void (*userFunc)(void), bool pullup = false)
 {
-	pinMode(this->_pin, INPUT);
-	digitalWrite(this->_pin, INPUT_PULLUP); // Optional Internal Pull-Up
+	if (pullup == true)
+		pinMode(this->_pin, INPUT);
+	else
+		pinMode(this->_pin, INPUT_PULLUP); // Optional Internal Pull-Up
+	
 	attachInterrupt(digitalPinToInterrupt(this->_pin), userFunc, RISING); // For better compatibility with any board, for example Arduino Leonardo Boards
 }
 
@@ -46,7 +71,7 @@ void FlowSensor::count()
 }
 
 /**
- * @brief
+ * @brief read sensor, get value
  * 
  * @param calibration Calibration pulse/liter
  */
@@ -60,7 +85,7 @@ void FlowSensor::read(long calibration)
 }
 
 /**
- * @brief 
+ * @brief get total pulse
  * 
  * @return unsigned long  _totalpulse
  */
@@ -70,17 +95,7 @@ unsigned long FlowSensor::getPulse()
 }
 
 /**
- * @brief Reset pulse count
- * 
- */
-void FlowSensor::resetPulse()
-{
-	this->_pulse=0;
-	this->_totalpulse=0;
-}
-
-/**
- * @brief 
+ * @brief get value flowrate/hour (L/h)
  * 
  * @return float flow rate / hour
  */
@@ -91,7 +106,7 @@ float FlowSensor::getFlowRate_h()
 }
 
 /**
- * @brief 
+ * @brief get value flowrate/minute (L/m)
  * 
  * @return float flow rate / minute
  */
@@ -102,9 +117,9 @@ float FlowSensor::getFlowRate_m()
 }
 
 /**
- * @brief 
+ * @brief get value flowrate/second (L/s)
  * 
- * @return float flow rate / secound
+ * @return float flow rate / second
  */
 float FlowSensor::getFlowRate_s()
 {
@@ -112,13 +127,23 @@ float FlowSensor::getFlowRate_s()
 }
 
 /**
- * @brief 
+ * @brief get Volume value (L)
  * 
  * @return float volume
  */
 float FlowSensor::getVolume()
 {
 	return this->_volume;
+}
+
+/**
+ * @brief Reset pulse count
+ * 
+ */
+void FlowSensor::resetPulse()
+{
+	this->_pulse=0;
+	this->_totalpulse=0;
 }
 
 /**
