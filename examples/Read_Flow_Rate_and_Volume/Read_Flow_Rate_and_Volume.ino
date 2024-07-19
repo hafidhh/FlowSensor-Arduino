@@ -55,8 +55,8 @@ void loop() {
 		Serial.println(Sensor.getVolume());
 		timebefore = millis();
 	}
-
-  // Reset Volume
+	
+	// Reset Volume
 	if (millis() - reset >= 60000)
 	{
 		Sensor.resetVolume();
