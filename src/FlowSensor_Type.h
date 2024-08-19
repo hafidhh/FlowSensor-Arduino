@@ -13,6 +13,7 @@
 // Sensor Type
 // -----------------------
 // YF
+#define YFD50   20
 #define YFS201	450
 #define YFB1	660
 #define YFS401	5880
