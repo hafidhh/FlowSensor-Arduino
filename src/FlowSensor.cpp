@@ -51,7 +51,7 @@ void FlowSensor::setPin(uint8_t pin)
  * @param userFunc 
  * @param pullup default value is fasle (0), if you have external pull up you can set to true (1)
  */
-void FlowSensor::begin(void (*userFunc)(void), bool pullup = false)
+void FlowSensor::begin(void (*userFunc)(void), bool pullup)
 {
 	if (pullup == true)
 		pinMode(this->_pin, INPUT);

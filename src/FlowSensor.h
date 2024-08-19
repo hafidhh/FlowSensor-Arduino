@@ -35,7 +35,7 @@ private:
 
 public:
 	FlowSensor(uint16_t type ,uint8_t pin);
-	void begin(void (*userFunc)(void));
+	void begin(void (*userFunc)(void), bool pullup = false);
 	void count();
 	void read(long calibration = 0);
 	void setType(uint16_t type);
